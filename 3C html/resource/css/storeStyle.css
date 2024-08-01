@@ -1,0 +1,125 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+.forPhone { display: none;}
+@media screen and (max-width:767px) {
+	.forWeb { display: none;}
+	.forPhone { display: block;}
+}
+
+.storeTitle { position: relative; display: flex;}
+.weekSale { position: absolute; right: 34px; bottom: 1px;}
+
+@media screen and (max-width:767px) {
+	.storeTitle { flex-wrap: wrap; justify-content: center;}
+	.weekSale {position: relative; right: auto; bottom: auto; padding:0 15px;}
+}
+
+/* 輪播 */
+.weekSaleBg {position: relative; z-index: 1;}
+.weekSaleSlideshow { width: 418px; height: 230px; overflow: hidden; position: absolute; top:63px; left: 6px; z-index: 5;}
+.weekSaleSlide { width: 100%; height: 100%; opacity: 0; transition: opacity 1s ease; position: absolute; top: 0; left: 0;}
+.weekSaleActive { opacity: 1;}
+
+
+@media screen and (max-width:480px) {
+	.weekSaleBg { width: 375px;}
+	.weekSaleSlideshow { width: 365px; height:202px; left:5px; top:4.5em;}
+}
+
+
+/* 店家*/
+.storeMain { position: relative; height: 2000px;}
+.storeLine { position: relative;}
+#storeLine1 { display: flex; flex-wrap: wrap; justify-content: center; width: 572px; margin-top: 464px; right: 0; position: absolute;}
+#storeLine2 { display: flex; position: relative; justify-content: center;}
+.storeItem { display: inline-block; position:relative;}
+#storeLine2 .storeItem { position:absolute;}
+.storeItem .storeLogo { position: absolute; right: 0; top: 0;}
+@media screen and (max-width:767px) {
+	.storeMain {height:auto;}
+	#storeLine1 { position: relative; width: 100%; margin-top:20px; padding: 20px 0;}
+	#storeLine1 .storeItem img { width: calc(100% - 25px);}
+	#storeLine2 {flex-wrap: wrap; padding: 0px; justify-content: space-evenly; position: relative;}
+	#storeLine2 .storeItem { display: block; position: relative; width: calc(100% / 2 - 20px); margin-left: 10px; margin-right: 10px; padding: 15px 0;}
+	.storeItem .storeLogo { width: 14em; position: absolute; right:10%; top: 0;}
+	#storeLine2 .storeItem>a { position: relative}
+}
+@media screen and (max-width:480px) {
+	.storeItem .storeLogo { width: 140px;}
+	#storeLine1 { position: relative; width:375px; padding:0 0 15px 0;}
+	#storeLine1 .storeItem img { width: calc(100% - 90px);}
+	#storeLine2 .storeItem>a>img { padding-top: 15px;}
+}
+
+/* 招牌動畫 */
+.shakeHorizontal { -webkit-animation: shake-horizontal 3s  infinite both;animation: shake-horizontal 3s  infinite both;}
+@-webkit-keyframes shake-horizontal {
+0%,100% { -webkit-transform: translateY(-3px); transform: translateY(-3px);	}
+50% { -webkit-transform: translateY(3px); transform: translateY(3px);}
+}
+@keyframes shake-horizontal {
+	0%,100% { -webkit-transform: translateY(-3px); transform: translateY(-3px);	}
+	50% { -webkit-transform: translateY(3px); transform: translateY(3px);}
+}
+@media screen and (max-width:767px) {
+	@-webkit-keyframes shake-horizontal {
+	0%,100% { -webkit-transform: translateY(-2px); transform: translateY(-2px);	}
+	50% { -webkit-transform: translateY(2px); transform: translateY(2px);}
+	}
+	@keyframes shake-horizontal {
+		0%,100% { -webkit-transform: translateY(-2px); transform: translateY(-2px);	}
+		50% { -webkit-transform: translateY(2px); transform: translateY(2px);}
+	}
+}
+
+/* 各店 */
+#storeItem01 { left:406px;  top: -1px;}
+#storeItem02 { margin-top: 28px; right: 45px; order: 1;}
+#storeItem03 { margin-top:40px; left: 31px;}
+#storeItem03 .storeLogo { right: 14px;}
+#storeItem04 { margin-top:421px; margin-right: 28px;}
+#storeItem05 { margin-top:520px; left: 25px;}
+#storeItem06 { margin-top:844px; margin-right: 250px;}
+#storeItem07 { margin-top:1298px; margin-right: -18px;}
+#storeItem07 .storeLogo { right: 77px;}
+#storeItem08 { margin-top:1006px; left: 34px;}
+#storeItem09 { margin-top:1196px; right: 65px;}
+#storeItem10 { margin-top:1461px; left: 72px;}
+#storeItem10 .storeLogo {right: 15px;}
+#storeItem11 { margin-top:1617px; right: 76px;}
+#storeItem12 { margin-top:1744px; margin-right: -95px;}
+#storeItem13 { margin-left: 84px;}
+#storeItem14 { margin-left: -18px; margin-top: -28px;}
+#storeItem15 { margin-left: -18px; margin-top: 14px;}
+
+@media screen and (max-width:767px) {
+	#storeItem01,#storeItem02,#storeItem03,#storeItem03 .storeLogo,#storeItem04,#storeItem05,#storeItem06,#storeItem07,#storeItem07 .storeLogo,#storeItem08,#storeItem09,#storeItem10,#storeItem10 .storeLogo,#storeItem11,#storeItem12 { left: auto; right: auto; margin: 0; order: 0;}
+	#storeItem03 .storeLogo,#storeItem07 .storeLogo,#storeItem10 .storeLogo {right:10%;}
+	#storeItem01>a>img { margin-top: 10px;}
+	#storeItem03 { margin-top: -35px;}
+	#storeItem03>a>img { margin-top: -10px;}
+	#storeItem04 { margin-top: -10px;}
+	#storeItem04>a>img { margin-top: 10px;}
+	#storeItem05 { margin-top: -15px;}
+	#storeItem05>a>img { width: 120%;  margin-top: 10px; margin-left: 10px;}
+	#storeItem06 { margin-top: 15px;}
+	#storeItem06>a>img { width: 90%;  margin-top: -20px; margin-left: 30px;}
+	#storeItem07 { margin-top: -20px;}
+	#storeItem07>a>img { width: 110%;  margin-left: 10px;}
+	#storeItem08 { margin-top: 10px;}
+	#storeItem08>a>img { width: 80%;  margin-top: -10px; margin-left: 30px;}
+	#storeItem09 { margin-top: -25px;}
+	#storeItem09>a>img { width: 110%; margin-left: 0px;}
+	#storeItem10>a>img { width: 90%;  margin-left: 10px;}
+	#storeItem11>a>img { margin-top: -40px; margin-left: 20px;}
+	#storeItem12>a>img { margin-top: 60px; margin-left: 0px;}
+	#storeItem14 { margin-left: -30px; }
+	#storeItem15 { margin-left: -40px;}
+}
+@media screen and (max-width:480px) {
+	#storeItem13 { margin-left: -30px; }
+	#storeItem14 { margin-left: -130px;}
+	#storeItem15 { margin-left: -110px;}
+}

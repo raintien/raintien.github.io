@@ -1,0 +1,229 @@
+@charset "utf-8";
+/* CSS Document */
+/* �Y���Q�g�s��css�g�b�� */
+
+
+.effect{
+    position: relative;
+}
+.effect .share{
+    z-index: 999;
+    display: block;
+  
+    position: absolute;
+    top: 75%;
+    right: 12%;
+}
+
+.effect .done{
+    z-index: 999;
+    display: block;
+  
+    position: absolute;
+    top: 75%;
+    right: 0%;
+}
+
+
+.effect .man{
+    /* display: block; */
+    position: absolute;
+    top: 47%;
+    left: 75%;
+}
+
+.pic-transform img:hover{
+    transform:scale(1.03,1.03);
+}
+
+.zone1220{
+    margin-top: 50px;
+}
+
+.bg001{
+    margin-top: 50px;
+}
+
+.bg-yellow{
+    background-color: #ffc107!important;
+}
+.zone1220{
+    margin-top: 0px;
+}
+
+
+
+@media only screen and (min-width: 768px) {
+    .zone1220{
+        margin-top: 50px;
+    }
+   
+
+    .storespace{
+        padding-top: 30px;
+    }
+
+    .pd_store{
+       width:400px;
+       height: 20px; 
+       position: absolute;
+       top: 10px;
+       left:10px ;
+    }
+
+    .pd_store_storename{
+        width: 100%;
+       position: absolute;
+       font-size: 14px;
+       line-height: 14px;
+       color: black;
+       text-align: left;
+       top: 4px;
+       left:25px ;
+    }
+    .card a{
+       margin-top: 10px; 
+    }
+
+  
+    .tt-3c{
+        margin-left: 20px;
+        margin-right: 10px;
+    }
+
+    .index-header-hot-search-list{
+        padding-left: 20px;
+    }
+
+    .magnifier{
+        background-color: #ffa43e;
+        border: 5px solid transparent;
+        border-radius: 0 4rem 4rem 0 ;
+        
+    }
+    .icon::before{
+        margin-left: 5px;
+    }
+
+    .form-control:focus{
+        border-radius: 4rem 0 0 4rem !important;
+    }
+
+    .index-header-hot-search-item a:hover{
+        color: #ffe421;
+    }
+
+    .border{
+        border: 1px solid #00abbc!important;
+    }
+
+    .btn-header{
+        background-color: rgba(0, 0, 0, 0.15) !important;
+    }
+    
+
+}
+
+
+@media screen and (max-width:767px) {
+
+    
+.storespace{
+    padding-top: 30px;
+}
+
+.pd_store{
+   width:400px;
+   height: 20px; 
+   position: absolute;
+   top: 5px;
+   left:10px ;
+}
+
+.pd_store_storename{
+    width: 100%;
+   position: absolute;
+   font-size: 14px;
+   line-height: 14px;
+   color: black;
+   text-align: left;
+   top: 4px;
+   left:25px ;
+}
+
+.day_arrival {
+	position: absolute;
+	top: 30px;
+	left: 50%;
+	background-image: url(../../images/day_arrival.png);
+	width: 85px;
+	height: 85px;
+	z-index: 2;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: left -1px;
+	font-size: 16px;
+    line-height: 20px;
+	color: #ffffff;
+	display: flex;
+  /* 水平置中 */
+  justify-content: center;    
+  /* 垂直置中 */
+  align-items: center;  
+}
+
+.tt-3c{
+    display: none;
+}
+
+.index-header-hot-search{
+    display: none;
+}
+.flex-fill{
+    margin-left: 5px;
+}
+
+.magnifier{
+    background-color: #ffa43e;
+    border: 4px solid transparent;
+    border-radius: 0 4rem 4rem 0 ;
+}
+.icon::before{
+    margin-left: 5px;
+}
+
+.border{
+    border: 1px solid #00abbc!important;
+}
+
+.btn-header{
+    background-color: rgba(0, 0, 0, 0.16) !important;
+}
+
+}
+
+.zone_case3-1{
+    display: flex;
+    flex-wrap: wrap;
+}
+.effect{
+    position: relative;
+    
+}
+.effect .baby{
+    z-index: 999;
+    display: block;
+  
+    position: absolute;
+    top: 28%;
+    right: 25%;
+
+}
+
+@media screen and (min-width: 768px) {
+    input#keyword::placeholder {
+      color: transparent;
+    }
+  }
+
+  
