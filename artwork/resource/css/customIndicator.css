@@ -1,0 +1,136 @@
+
+
+.box {
+  width: 1200px; /* 固定卡片的寬度 */
+  height: 400px; /* 固定卡片的高度 */
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 0;
+  text-align: center;
+  position: relative; /* 確保內部絕對定位的元素相對於此容器 */
+  overflow: hidden; /* 防止溢出 */
+}
+
+.carousel {
+  display: flex;
+  justify-content: center; /* 水平置中 */
+  align-items: center; /* 垂直置中 */
+  position: absolute; /* 改為絕對定位以適應 .box */
+  top: 50%; /* 垂直居中 */
+  left: 50%; /* 水平居中 */
+  transform: translate(-100%, -50%); /* 使其完全居中 */
+  width: 100%; /* 填滿整個 .box 容器 */
+  height: 100%; /* 填滿整個 .box 容器 */
+  perspective: 1000px;
+}
+
+.carousel-item {
+  position: absolute;
+  width: 80%; /* 使用百分比讓卡片根據螢幕寬度調整 */
+border-radius: 10px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+
+  color: white;
+  border-radius: 10px;
+  transition: transform 1s ease, opacity 1s ease;
+  opacity: 0;
+}
+
+.carousel-item.active {
+  transform: translateX(0) scale(1.2);
+  z-index: 3;
+  opacity: 1;
+}
+
+.carousel-item.left {
+  transform: translateX(-300px) scale(0.8);
+  z-index: 2;
+  opacity: 0.5;
+}
+
+.carousel-item.right {
+  transform: translateX(300px) scale(0.8);
+  z-index: 2;
+  opacity: 0.5;
+}
+
+
+/* 平板裝置 */
+@media (max-width: 1024px) {
+  .box {
+    width: 1200px; /* 固定卡片的寬度 */
+    height: 120px; /* 固定卡片的高度 */
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 0;
+    text-align: center;
+    position: relative; /* 確保內部絕對定位的元素相對於此容器 */
+    overflow: hidden; /* 防止溢出 */
+  }
+
+  .carousel {
+    display: flex;
+    justify-content: center; /* 水平置中 */
+    align-items: center; /* 垂直置中 */
+    position: absolute; /* 改為絕對定位以適應 .box */
+    top: 50%; /* 垂直居中 */
+    left: 50%; /* 水平居中 */
+    transform: translate(-135%, -50%); /* 使其完全居中 */
+    width: 100%; /* 填滿整個 .box 容器 */
+    height: 100%; /* 填滿整個 .box 容器 */
+    perspective: 1000px;
+  }
+  .carousel-item {
+    width: 90%;
+    max-width: 250px;
+    height: 180px;
+    font-size: 22px;
+  }
+
+  .carousel-item.left {
+    transform: translateX(-270px) scale(0.8);
+  }
+
+  .carousel-item.right {
+    transform: translateX(270px) scale(0.8);
+  }
+}
+
+/* 手機版裝置 */
+@media (max-width: 768px) {
+  .carousel-item {
+    width: 95%;
+    max-width: 200px;
+    height: 160px;
+    font-size: 20px;
+  }
+
+  .carousel-item.left {
+    transform: translateX(-220px) scale(0.8);
+  }
+
+  .carousel-item.right {
+    transform: translateX(220px) scale(0.8);
+  }
+}
+
+@media (max-width: 480px) {
+  .carousel-item {
+    width: 100%;
+    max-width: 180px;
+    height: 140px;
+    font-size: 18px;
+  }
+
+  .carousel-item.left {
+    transform: translateX(-190px) scale(0.8);
+  }
+
+  .carousel-item.right {
+    transform: translateX(190px) scale(0.8);
+  }
+}
